@@ -1,0 +1,314 @@
+/* ====================================
+|-------IMPORTING THE FONT FAMILY------|
+====================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+/* ====================================
+|-------LITTLE CSS RESET---------------|
+====================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  height: 100%;
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--lightPink);
+}
+
+html {
+  font-size: 16px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* ==================================================
+|-------COLOURS NEEDED FOR THE WEBPAGE---------------|
+====================================================*/
+
+body {
+  padding: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out,
+    box-shadow 0.1s ease-in-out;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.calc_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.calc_head > h1 {
+  font-size: 1.3rem;
+}
+
+.calc_screen {
+  margin-top: 1.5rem;
+  height: 76px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.theme_container {
+  display: flex;
+  gap: 2rem;
+}
+
+.theme_container > p {
+  margin-top: 1.73rem;
+}
+
+.toggle-button-container {
+  width: 56px;
+  border-radius: 1rem;
+  padding: 0.1rem;
+  position: relative;
+}
+
+.toggle-button {
+  clip-path: circle();
+  height: 18px;
+  width: 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+.theme_number_container {
+  width: 56px;
+  display: flex;
+  gap: 1rem;
+}
+
+.theme_container > p {
+  font-size: 0.8rem;
+}
+
+.theme {
+  cursor: pointer;
+}
+
+.calc_keys_container {
+  margin-top: 1rem;
+  padding: 1.3rem;
+  border-radius: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-auto-rows: 60px;
+  column-gap: 10px;
+  row-gap: 1rem;
+}
+
+@media (max-width: 320px) {
+  .calc_keys_container {
+    grid-template-columns: repeat(4, 50px);
+    grid-auto-rows: 50px;
+  }
+}
+
+.span_2 {
+  grid-column: span 2;
+}
+
+.theme_1 {
+  background-color: hsl(222, 26%, 31%);
+
+  & .toggle-button-container {
+    background-color: hsl(223, 31%, 20%);
+  }
+
+  & .toggle-button {
+    background-color: hsl(6, 63%, 50%);
+  }
+
+  & .calc_screen {
+    background-color: hsl(224, 36%, 15%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .calc_head > * {
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .calc_keys_container {
+    background-color: hsl(223, 31%, 20%);
+  }
+
+  & button {
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: 0px 4px 0px hsl(28, 16%, 65%);
+    color: hsl(221, 14%, 31%);
+  }
+
+  & button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 4px hsl(28, 16%, 65%);
+  }
+
+  & .two_same_color_btn {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 4px 0px hsl(224, 28%, 35%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .two_same_color_btn:active {
+    box-shadow: 0px 0px 4px hsl(224, 28%, 35%);
+  }
+
+  & .single_btn_with_another_color {
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 4px 0px hsl(6, 70%, 34%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .single_btn_with_another_color:active {
+    box-shadow: 0px 0px 4px hsl(6, 70%, 34%);
+  }
+}
+
+.theme_2 {
+  background-color: hsl(0, 0%, 90%);
+
+  & .toggle-button-container {
+    background-color: hsl(0, 5%, 81%);
+  }
+
+  & .toggle-button {
+    background-color: hsl(25, 98%, 40%);
+  }
+
+  & .calc_screen {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+  }
+
+  & .calc_head > * {
+    color: hsl(60, 10%, 19%);
+  }
+
+  & .calc_keys_container {
+    background-color: hsl(0, 5%, 81%);
+  }
+
+  & button {
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px 4px 0px hsl(35, 11%, 61%);
+    color: hsl(60, 10%, 19%);
+  }
+
+  & button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 4px hsl(35, 11%, 61%);
+  }
+
+  & .two_same_color_btn {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0px 4px 0px hsl(185, 58%, 25%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .two_same_color_btn:active {
+    box-shadow: 0px 0px 4px hsl(185, 58%, 25%);
+  }
+
+  & .single_btn_with_another_color {
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0px 4px 0px hsl(25, 99%, 27%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .single_btn_with_another_color:active {
+    box-shadow: 0px 0px 4px hsl(35, 11%, 61%);
+  }
+}
+
+.theme_3 {
+  background-color: hsl(268, 75%, 9%);
+
+  & .toggle-button-container {
+    background-color: hsl(268, 71%, 12%);
+  }
+
+  & .toggle-button {
+    background-color: hsl(176, 100%, 44%);
+  }
+
+  & .calc_screen {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+  }
+
+  & .calc_head > * {
+    color: hsl(52, 100%, 62%);
+  }
+
+  & .calc_keys_container {
+    background-color: hsl(268, 71%, 12%);
+  }
+
+  & button {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 4px 0px hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+  }
+
+  & button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px 4px hsl(290, 70%, 36%);
+  }
+
+  & .two_same_color_btn {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0px 4px 0px hsl(285, 91%, 52%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  & .two_same_color_btn:active {
+    box-shadow: 0px 0px 4px hsl(285, 91%, 52%);
+  }
+
+  & .single_btn_with_another_color {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 4px 0px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+  }
+
+  & .single_btn_with_another_color:active {
+    box-shadow: 0px 0px 4px hsl(177, 92%, 70%);
+  }
+}
