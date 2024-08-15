@@ -72,17 +72,20 @@ function stopMovingButton() {
 // Function to move the toggle button to the correct position when a theme number is clicked
 function moveToThemePosition(themeNumber) {
     const containerRect = toggleButtonContainer.getBoundingClientRect();
-    const buttonRect = toggleButton.getBoundingClientRect();
+    
 
     let newLeft;
     if (themeNumber === "1") {
         newLeft = 0;
-    } else if (themeNumber === "2") {
-        // newLeft = (containerRect.width - buttonRect.width) / 2;
-        newLeft == Math.round((containerRect.width / 3));
-    } else if (themeNumber === "3") {
-        // newLeft = containerRect.width - buttonRect.width;
-        newLeft == Math.round((2 * (containerRect.width / 3)));
     }
+    
+    else if (themeNumber === "2") {
+        newLeft = Math.round((containerRect.width / 3));
+    }
+    
+    else if (themeNumber === "3") {
+        newLeft = Math.round((2 * (containerRect.width / 3)));
+    }
+    
     toggleButton.style.left = `${newLeft}px`;
 }
