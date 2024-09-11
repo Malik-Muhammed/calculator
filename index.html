@@ -31,34 +31,36 @@
       </div>
     </section>
 
-    <section class="calc_screen">399,981</section>
+    <section class="calc_screen"></section>
+    <!-- <input type="text" name="text" id="" placeholder="0" class="calc_screen"> -->
 
     <section class="calc_keys_container">
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="two_same_color_btn ">DEL</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>+</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>-</button>
-      <button>.</button>
-      <button>0</button>
-      <button>/</button>
-      <button>x</button>
-      <button class="span_2 two_same_color_btn">RESET</button>
-      <button class="span_2 single_btn_with_another_color">=</button>
+      <button class="number_btn">7</button>
+      <button class="number_btn">8</button>
+      <button class="number_btn">9</button>
+      <button class="two_same_color_btn" id="del_btn">DEL</button>
+      <button class="number_btn">4</button>
+      <button class="number_btn">5</button>
+      <button class="number_btn">6</button>
+      <button class="operator">+</button>
+      <button class="number_btn">1</button>
+      <button class="number_btn">2</button>
+      <button class="number_btn">3</button>
+      <button class="operator">-</button>
+      <button class="number_btn decimalPoint_btn">.</button>
+      <button class="number_btn">0</button>
+      <button class="operator">/</button>
+      <button class="operator">x</button>
+      <button class="span_2 two_same_color_btn reset_btn">RESET</button>
+      <button class="span_2 single_btn_with_another_color equal_btn">=</button>
 
     </section>
 
 
   </main>
 
-  
+  <script src="https://cdn.jsdelivr.net/npm/decimal.js@latest/decimal.min.js"></script>
+
   <script src="script.js"></script>
 </body>
 

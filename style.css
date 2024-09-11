@@ -65,7 +65,7 @@ button {
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .calc_head {
@@ -83,6 +83,10 @@ button {
   height: 76px;
   border-radius: 10px;
   font-size: 1.5rem;
+  text-align: right;
+  padding: 1.3rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .theme_container {
@@ -128,8 +132,8 @@ button {
   padding: 1.3rem;
   border-radius: 0.6rem;
   display: grid;
-  grid-template-columns: repeat(4, 60px);
-  grid-auto-rows: 60px;
+  grid-template-columns: repeat(4, 70px); /***60**/
+  grid-auto-rows: 40px; /***60**/
   column-gap: 10px;
   row-gap: 1rem;
 }
@@ -178,6 +182,7 @@ button {
   & button:active {
     transform: translateY(2px);
     box-shadow: 0px 0px 4px hsl(28, 16%, 65%);
+    background-color: hsl(0, 0%, 100%);
   }
 
   & .two_same_color_btn {
